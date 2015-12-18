@@ -10,10 +10,10 @@ _MerryChristmas is a exercise in Google Udacity course use for practise View and
 - Before Christmas application run count down and Santa clause move from left to right
 - When count down finish Christmas happen background will change, music, wish word will be launcher
 
-### Screenshot: Before Merry Christmas event
+### Screenshot: Before Christmas event happen
 ![Screenshot](https://raw.github.com/ilentt/MerryChristmas/master/app/src/main/res/drawable/screenshot1.png)
 
-### Screenshot: After Merry Christmas event
+### Screenshot: After Christmas event happen
 ![Screenshot](https://raw.github.com/ilentt/MerryChristmas/master/app/src/main/res/drawable/screenshot2.png)
 
 ### Feature:

@@ -24,3 +24,6 @@ _MerryChristmas is a exercise in Google Udacity course use for practise View and
 
 ### Bug:
 - Application is not work perfect, it's contains some bugs and I will fix in next time. 
+
+### Thank you:
+- Special thanks for Google Developer Group Vietnam, Mr Vu and other people who have help me complete this course. 

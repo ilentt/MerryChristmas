@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="redChristmas">#B71C1C</color>
+    <color name="whiteChristmas">#FFF</color>
+    <color name="songText">#FFFF00</color>
+    <color name="borderButton">#AEEA00</color>
+    <color name="buttonText">#FF3D00</color>
+</resources>

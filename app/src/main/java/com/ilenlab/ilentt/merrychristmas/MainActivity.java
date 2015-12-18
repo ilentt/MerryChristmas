@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static int oneTimeOnly = 0;
     private static SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-    private static String FUTURE_DATE = "18/12/2015 22:30:00";
+    private static String FUTURE_DATE = "24/12/2015 00:00:00";
     private TextView txtDay, txtHour, txtMinute, txtSecond, txtEvent, txtRemind, txtTotal, txtSong;
     private Button btnPlay, btnPause;
     private MediaPlayer mediaPlayer;

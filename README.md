@@ -5,7 +5,12 @@ _MerryChristmas is a exercise in Google Udacity course use for practise View and
 - TextView
 - ImageView
 - Button
-
+- MediaPlayer
+- SeekBar
+- Runnable
+- Handler
+- Relative layout
+- Linear layout
 ### Feature:
 - Before Christmas application run count down and Santa clause move from left to right
 - When count down finish Christmas happen background will change, music, wish word will be launcher

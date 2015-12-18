@@ -24,6 +24,9 @@ import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static int oneTimeOnly = 0;
+    private static SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+    private static String FUTURE_DATE = "18/12/2015 22:30:00";
     private TextView txtDay, txtHour, txtMinute, txtSecond, txtEvent, txtRemind, txtTotal, txtSong;
     private Button btnPlay, btnPause;
     private MediaPlayer mediaPlayer;
@@ -35,10 +38,19 @@ public class MainActivity extends AppCompatActivity {
     private ImageView img_animation;
     private float length;
     private RelativeLayout relativeRoot;
-
-    private static int oneTimeOnly = 0;
-    private static SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-    private static String FUTURE_DATE = "18/12/2015 20:30:00";
+    private Runnable UpdateSongTime = new Runnable() {
+        @Override
+        public void run() {
+            startTime = mediaPlayer.getCurrentPosition();
+            txtRemind.setText(String.format("%d:%d",
+                            TimeUnit.MILLISECONDS.toMinutes((long) startTime),
+                            TimeUnit.MILLISECONDS.toSeconds((long) startTime) -
+                                    TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes((long) startTime)))
+            );
+            seekBar.setProgress((int) startTime);
+            handler.postDelayed(this, 100);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,20 +145,6 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
     }
 
-    private Runnable UpdateSongTime = new Runnable() {
-        @Override
-        public void run() {
-            startTime = mediaPlayer.getCurrentPosition();
-            txtRemind.setText(String.format("%d:%d",
-                    TimeUnit.MILLISECONDS.toMinutes((long) startTime),
-                    TimeUnit.MILLISECONDS.toSeconds((long) startTime) -
-                    TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes((long) startTime)))
-            );
-            seekBar.setProgress((int) startTime);
-            handler.postDelayed(this, 100);
-        }
-    };
-
     public void moveImage(long duration, float from, float to) {
         try {
             TranslateAnimation animation = new TranslateAnimation(from, to, 0.0f, 0.0f);
@@ -169,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(this, 1000);
                 try {
 
-                    Date futureDate = dateFormat.parse(FUTURE_DATE);;
+                    Date futureDate = dateFormat.parse(FUTURE_DATE);
                     Date currentDate = new Date();
 
                     if(currentDate.before(futureDate)) {
@@ -211,7 +209,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        handler.postDelayed(runnable, 1 * 1000);
+        handler.postDelayed(runnable, 1000);
     }
 
     public void performAction() {

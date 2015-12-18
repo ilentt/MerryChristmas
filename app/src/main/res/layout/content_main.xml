@@ -2,13 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg1"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.ilenlab.ilentt.merrychristmas.MainActivity"
-    tools:showIn="@layout/activity_main"
-    android:id="@+id/relative_root"
-    android:background="@drawable/bg1">
+    tools:showIn="@layout/activity_main">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,10 +18,10 @@
             android:id="@+id/img_animation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="42dp"
-            android:src="@drawable/santa"
-            android:layout_alignParentBottom="true"/>
+            android:src="@drawable/santa" />
 
         <LinearLayout
             android:id="@+id/linearTime"
@@ -47,9 +47,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:gravity="center"
-                    android:textSize="@dimen/sizeButtonText"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/redChristmas" />
+                    android:textColor="@color/redChristmas"
+                    android:textSize="@dimen/sizeTimer" />
 
                 <TextView
                     android:id="@+id/textview_txtDay"
@@ -58,9 +58,9 @@
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
                     android:text="Days"
-                    android:textSize="@dimen/sizeButtonText"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="@color/redChristmas" />
+                    android:textColor="@color/redChristmas"
+                    android:textSize="@dimen/sizeTimerText" />
 
             </LinearLayout>
 
@@ -78,9 +78,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:gravity="center"
-                    android:textSize="@dimen/sizeTimer"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/redChristmas" />
+                    android:textColor="@color/redChristmas"
+                    android:textSize="@dimen/sizeTimer" />
 
                 <TextView
                     android:id="@+id/textview_txtHour"
@@ -89,9 +89,9 @@
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
                     android:text="Hour"
-                    android:textSize="@dimen/sizeTimerText"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="@color/redChristmas" />
+                    android:textColor="@color/redChristmas"
+                    android:textSize="@dimen/sizeTimerText" />
 
             </LinearLayout>
 
@@ -109,9 +109,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:gravity="center"
-                    android:textSize="@dimen/sizeTimer"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/redChristmas" />
+                    android:textColor="@color/redChristmas"
+                    android:textSize="@dimen/sizeTimer" />
 
                 <TextView
                     android:id="@+id/textview_txtMinute"
@@ -120,9 +120,9 @@
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
                     android:text="Minute"
-                    android:textSize="@dimen/sizeTimerText"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="@color/redChristmas" />
+                    android:textColor="@color/redChristmas"
+                    android:textSize="@dimen/sizeTimerText" />
 
             </LinearLayout>
 
@@ -140,9 +140,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:gravity="center"
-                    android:textSize="@dimen/sizeTimer"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/redChristmas" />
+                    android:textColor="@color/redChristmas"
+                    android:textSize="@dimen/sizeTimer" />
 
                 <TextView
                     android:id="@+id/textview_txtSecond"
@@ -151,9 +151,9 @@
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
                     android:text="Second"
-                    android:textSize="@dimen/sizeTimerText"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="@color/redChristmas" />
+                    android:textColor="@color/redChristmas"
+                    android:textSize="@dimen/sizeTimerText" />
 
             </LinearLayout>
 
@@ -171,8 +171,8 @@
             android:id="@+id/linear_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="@dimen/even_margin">
+            android:layout_marginBottom="@dimen/even_margin"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/linear_event"
@@ -184,11 +184,11 @@
                     android:id="@+id/textview_Event"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="Merry christmas"
                     android:textColor="@color/songText"
-                    android:visibility="gone"
                     android:textSize="@dimen/sizeEventText"
-                    android:gravity="center"/>
+                    android:visibility="gone" />
 
             </LinearLayout>
 
@@ -202,10 +202,10 @@
                     android:id="@+id/textview_Song"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="Song name"
-                    android:textSize="@dimen/sizeTimerText"
                     android:textColor="@color/songText"
-                    android:gravity="center"/>
+                    android:textSize="@dimen/sizeTimerText" />
             </LinearLayout>
 
             <LinearLayout
@@ -218,11 +218,11 @@
                     android:id="@+id/textview_Remind"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
                     android:layout_weight="0"
                     android:text="0.0"
-                    android:textColor="@color/songText"
-                    android:layout_margin="@dimen/activity_horizontal_margin"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/songText" />
 
                 <SeekBar
                     android:id="@+id/seekBar"
@@ -234,11 +234,11 @@
                     android:id="@+id/textview_Total"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
                     android:layout_weight="0"
                     android:text="0.0"
-                    android:textColor="@color/songText"
-                    android:layout_margin="@dimen/activity_horizontal_margin"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/songText" />
             </LinearLayout>
 
             <LinearLayout
@@ -251,23 +251,23 @@
                     android:id="@+id/button_Play"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
                     android:layout_weight="1"
                     android:background="@drawable/rounded"
-                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:text=">"
                     android:textColor="@color/buttonText"
-                    android:textSize="@dimen/sizeButtonText"
-                    android:text=">" />
+                    android:textSize="@dimen/sizeButtonText" />
 
                 <Button
                     android:id="@+id/button_Pause"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
                     android:layout_weight="1"
                     android:background="@drawable/rounded"
-                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:text="||"
                     android:textColor="@color/buttonText"
-                    android:textSize="@dimen/sizeButtonText"
-                    android:text="||" />
+                    android:textSize="@dimen/sizeButtonText" />
 
             </LinearLayout>
         </LinearLayout>

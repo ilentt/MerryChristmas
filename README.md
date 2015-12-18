@@ -22,5 +22,5 @@ _MerryChristmas is a exercise in Google Udacity course use for practise View and
 ### Screenshot: After Christmas event happen
 ![Screenshot](https://raw.github.com/ilentt/MerryChristmas/master/app/src/main/res/drawable/screenshot2.png)
 
-### Feature:
+### Bug:
 - Application is not work perfect, it's contains some bugs and I will fix in next time. 

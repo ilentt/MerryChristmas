@@ -1,4 +1,4 @@
-# MerryChristmas
+# Merry Christmas
 _Vietnam Android Academy - Final Project Submission - Batch 1_
 ### Introduction
 _MerryChristmas is a exercise in Google Udacity course use for practise View and Layout in Android App include:_

@@ -30,5 +30,5 @@ _MerryChristmas is a exercise in Google Udacity course use for practise View and
 
 ### Certificate:
 - _Certificate after complete this course._
-- 
+
 ![Certificate](https://raw.github.com/ilentt/MerryChristmas/master/app/src/main/res/drawable/certificate.png)
